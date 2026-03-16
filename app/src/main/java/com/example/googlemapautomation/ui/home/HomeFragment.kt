@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
             AlertDialog.Builder(requireContext())
                 .setTitle("Overlay Permission")
                 .setMessage("Automation requires overlay permission to display prompts. Do you want to enable it?")
-                .setPositiveButton("去开启") { dialog, _ ->
+                .setPositiveButton("Activate") { dialog, _ ->
                     val intent = Intent(
                         Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                         Uri.parse("package:${requireContext().packageName}")
@@ -72,7 +72,7 @@ class HomeFragment : Fragment() {
                     startActivity(intent)
                     dialog.dismiss()
                 }
-                .setNegativeButton("取消") { dialog, _ ->
+                .setNegativeButton("Cancel") { dialog, _ ->
                     dialog.dismiss()
                 }
                 .show()
